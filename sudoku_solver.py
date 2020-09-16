@@ -1,4 +1,4 @@
-board = [
+sudokuboard = [
     [7,8,0,4,0,0,1,2,0],
     [6,0,0,0,7,5,0,0,9],
     [0,0,0,6,0,1,0,7,8],
@@ -47,9 +47,10 @@ def Valid(board, number, pos):
 	box_y = pos[0] // 3
 
 	for i in range(box_y * 3, box_y * 3 + 3):
-		for j in range(box_x * 3, box_y * 3 + 3):
+		for j in range(box_x * 3, box_x * 3 + 3):
 			if board[i][j] == number and (i , j) != pos:
 				return False
+	return True
 
 
 def PrintBoard(board):
@@ -69,8 +70,12 @@ def PrintBoard(board):
 
 def FindEmpty(board):
 	for i in range(len(board)):
-		for j in range(len(board[0]))
+		for j in range(len(board[0])):
 			if board[i][j] == 0:
 				return (i, j) #row, col
 	return None
 
+PrintBoard(sudokuboard)
+Solve(sudokuboard)
+print("aaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+PrintBoard(sudokuboard)
