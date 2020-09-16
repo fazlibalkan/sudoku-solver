@@ -1,3 +1,3 @@
 # sudoku-solver
  
-A sudoku solver using backtracking algorithm.
+A sudoku solver that uses backtracking algorithm.
